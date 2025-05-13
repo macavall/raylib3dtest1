@@ -190,42 +190,6 @@ void HandleCameraKeyPress(int* cameraMode, Camera* camera)
 	}
 }
 
-//void HandleIndex(int *index, Vector3 *cylinderPosX, Vector3 *cylinderPosY, Vector3* cylinderPosZ, int *cylinderDirection, int *cylinderSpeed)
-//{
-//	switch (*index)
-//	{
-//		case 0:
-//			cylinderPosX += *cylinderSpeed * *cylinderDirection;
-//
-//			if (cylinderPosX > 10.0f || cylinderPosX < -10.0f)
-//			{
-//				*cylinderDirection *= -1;  // Reverse direction
-//			}
-//			break;
-//
-//		case 1:
-//			cylinderPosY += *cylinderSpeed * *cylinderDirection;
-//
-//			if (cylinderPosY > 10.0f || cylinderPosY < -10.0f)
-//			{
-//				*cylinderDirection *= -1;  // Reverse direction
-//			}
-//			break;
-//
-//		case 2:
-//			cylinderPosZ += *cylinderSpeed * *cylinderDirection;
-//
-//			if (cylinderPosZ > 10.0f || cylinderPosZ < -10.0f)
-//			{
-//				*cylinderDirection *= -1;  // Reverse direction
-//			}
-//			break;
-//
-//		default:
-//			break;
-//	}
-//}
-
 //------------------------------------------------------------------------------------
 // Program main entry point
 //------------------------------------------------------------------------------------
