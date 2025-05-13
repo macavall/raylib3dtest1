@@ -18,6 +18,15 @@
 
 #define MAX_COLUMNS 20
 
+void DrawUserCubes(Vector3 *positions, float *heights, Color *colors)
+{
+	for (int i = 0; i < MAX_COLUMNS; i++)
+	{
+		DrawCube(positions[i], 2.0f, heights[i], 2.0f, colors[i]);
+		DrawCubeWires(positions[i], 2.0f, heights[i], 2.0f, MAROON);
+	}
+}
+
 void DrawUserPlane()
 {
 	DrawPlane((Vector3) { 0.0f, 0.0f, 0.0f }, (Vector2) { 32.0f, 32.0f }, LIGHTGRAY); // Draw ground
@@ -202,9 +211,6 @@ int main(void)
 
 	int index = 0;
 
-	//float cylinderPosX = 0.0f;
-	//float cylinderPosY = 1.0f;
-	//float cylinderPosZ = -5.0f;
 	Vector3 cylinderPos = { 0.0f, 1.0f, -5.0f }; // Y is height from ground, Z to place in front of player
 	float cylinderSpeed = 0.05f;
 	int cylinderDirection = 1;
@@ -264,6 +270,8 @@ int main(void)
 		// Vector3 cylinderPosition = { cylinderPosX, cylinderPosY, cylinderPosZ }; // Y is height from ground, Z to place in front of player
 		DrawCylinder(cylinderPos, 0.5f, 0.5f, 2.0f, 64, RED);
 		//DrawCylinderWires(cylinderPosition, 0.5f, 0.5f, 2.0f, 64, MAROON);
+
+		DrawUserCubes(&positions, &heights, &colors);
 
 		// Draw some cubes around
 		//for (int i = 0; i < MAX_COLUMNS; i++)
